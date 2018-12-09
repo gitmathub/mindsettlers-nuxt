@@ -10,17 +10,40 @@
         <span>{{ error }}</span>
       </div>
     </div>
+    <div>
+      <h2>Read from Firestore.</h2>
+      <div>
+        <span>{{ text }}</span>
+      </div>
+    </div>
   </section>
 </template>
 <script>
-import { fireDb } from "~/plugins/firebase.js"
+import { fireDb } from "~/plugins/firebaseInit.js"
 export default {
   data() {
     return {
       writeSuccessful: false,
-      error: null
+      error: null,
+      text: null
     }
   },
+
+  mounted() {},
+
+  async asyncData() {
+    const ref = fireDb.collection("test").doc("test")
+    let snap
+    try {
+      snap = await ref.get()
+    } catch (e) {
+      console.error(e)
+    }
+    return {
+      text: snap.data().text
+    }
+  },
+
   methods: {
     async writeToFirestore() {
       const ref = fireDb.collection("test").doc("test")
@@ -36,6 +59,19 @@ export default {
         this.error = e
         console.error(e)
       }
+    },
+
+    async readFromFirestore() {
+      const ref = fireDb.collection("test").doc("test")
+      let snap
+      try {
+        snap = await ref.get()
+      } catch (e) {
+        this.error = e
+        console.error(e)
+      }
+      this.text = snap.data().text
+      this.readSuccessful = true
     }
   }
 }
