@@ -4,8 +4,10 @@
 
 Questions are:
 
-1. Can we make Firestore work on server side?
+1. Can we make Firestore work on server side? CHECK
 2. How does the static page generation function?
+  a. Resolve dynamic links (with id)
+  b. Check the meta tags in the header
 3. How can the migration from the current VueJS project to Nuxt work?
 4. Will work be easier or harder with Nuxt?
 
