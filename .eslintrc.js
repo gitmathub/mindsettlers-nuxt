@@ -21,8 +21,8 @@ module.exports = {
   rules: {
     "generator-star-spacing": "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    "quotes": [2, "double", "avoid-escape"],
-    "semi": [2, "never"],
+    "quotes": [1, "double", "avoid-escape"],
+    "semi": [1, "never"],
     "space-before-function-paren": ["warn", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
     "vue/max-attributes-per-line": ["off"]
   }
