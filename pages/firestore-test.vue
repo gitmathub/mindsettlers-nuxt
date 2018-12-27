@@ -3,7 +3,10 @@
     <div>
       <h2>Write to Firestore.</h2>
       <div>
-        <button :disabled="writeSuccessful" @click="writeToFirestore">
+        <button
+          :disabled="writeSuccessful"
+          @click="writeToFirestore"
+        >
           <span v-if="!writeSuccessful">Write now</span>
           <span v-else>Successful!</span>
         </button>
@@ -19,6 +22,7 @@
   </section>
 </template>
 <script>
+import * as _ from "lodash"
 import { fireDb } from "~/plugins/firebaseInit.js"
 export default {
   data() {
@@ -40,7 +44,7 @@ export default {
       console.error(e)
     }
     return {
-      text: snap.data().text
+      text: _.get(snap.data(), "text", "empty")
     }
   },
 
@@ -70,17 +74,18 @@ export default {
         this.error = e
         console.error(e)
       }
-      this.text = snap.data().text
+      this.text = _.get(snap.data(), "text", "default")
       this.readSuccessful = true
     }
   }
 }
 </script>
 <style lang="stylus" scoped>
-.container
-  min-height 100vh
-  display flex
-  justify-content center
-  align-items center
-  text-align center
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 </style>
