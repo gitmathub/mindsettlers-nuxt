@@ -1,13 +1,15 @@
 # Mind Settlers Nuxt
 
-> This is a protoype project. It's purpose is to find out if it can replace current Vuejs installation with SSR configuration.
+> This is a research project for the app.mindsettlers.com homepage. It's purpose is to find out if it can replace current Vuejs installation.
 
-Questions are:
+## To be researched
 
-1. Can we make Firestore work on server side?
-2. How does the static page generation function?
-3. How can the migration from the current VueJS project to Nuxt work?
-4. Will work be easier or harder with Nuxt?
+1. Can we make Firestore work on server side? CHECK
+1. Page generation. How does the static page generation work? CHECK
+1. Page generation. Test how to resolve dynamic links (with id)
+1. Page generation. Check the meta tags in the header
+1. How can the migration from the current VueJS project to Nuxt work?
+1. Will work be easier or harder with Nuxt?
 
 
 ## Build Setup
@@ -27,5 +29,10 @@ $ npm start
 $ npm run generate
 ```
 
+## Credits
+
+I followed the instructions of the Medium article of Pascal Luther: [Nuxt.js (v2), Firestore & SSR](https://medium.com/@pascalluther/nuxt-js-v2-firestore-ssr-938d8fb7d2b0). All worked from the very first beginning.
+
+The initial setup is based on: https://github.com/nuxt/create-nuxt-app
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
