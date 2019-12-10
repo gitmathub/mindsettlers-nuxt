@@ -16,8 +16,10 @@
     "@grpc/proto-loader": "^0.3.0",
     "cross-env": "^5.2.0",
     "firebase": "^5.7.0",
-    "nuxt": "^2.2.0",
-    "os": "^0.1.1"
+    "nuxt": "^2.10.2",
+    "os": "^0.1.1",
+    "serialize-javascript": "^2.1.2",
+    "tar": "^5.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -31,7 +33,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^4.0.0",
-    "nodemon": "^1.11.0",
+    "nodemon": "^2.0.1",
     "prettier": "1.14.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
