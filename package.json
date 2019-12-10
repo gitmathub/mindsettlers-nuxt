@@ -1,9 +1,14 @@
 {
   "name": "mindsettlers-nuxt",
   "version": "1.0.0",
-  "description": "Mind Settlers Nuxt",
+  "description": "Test project with working firestore configuration for SSR",
   "author": "mat",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitmathub/mindsettlers-nuxt"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -19,7 +24,7 @@
     "nuxt": "^2.10.2",
     "os": "^0.1.1",
     "serialize-javascript": "^2.1.2",
-    "tar": "^5.0.1"
+    "tar": "^5.0.5"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
